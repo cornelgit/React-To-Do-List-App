@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 function ToDoTaskList() {
     const [tasks, setTasks] = useState([]);
@@ -100,7 +102,7 @@ function ToDoTaskList() {
                                 className="delete-button"
                                 onClick={() => deleteTask(index)}
                             >
-                                &#x2717;
+                                <FontAwesomeIcon icon={faTrash} />
                             </button>
                         </li>
                     ))}
