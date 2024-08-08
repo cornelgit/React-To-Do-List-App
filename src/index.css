@@ -1,33 +1,27 @@
 body {
     background-color: hsl(0, 0%, 10%);
+    margin: 0;
 }
 
 .to-do-list {
     font-family: Arial, sans-serif;
     text-align: center;
     margin-top: 100px;
+    width: 100%;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
 }
 
 button {
-    font-weight: bold;
     padding: 8px 12px;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.5s ease;
-}
-
-.add-button {
-    background-color: hsl(125, 47%, 54%);
-    padding: 10px;
-    border: 1px solid hsla(0, 0%, 80%, 0.5);
-    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .add-button:hover {
@@ -61,38 +55,42 @@ button {
 
 li {
     font-size: 2rem;
-    font-weight: bold;
-    padding: 15px;
+    padding: 5px 2px 5px 5px;
     background-color: hsl(0, 0%, 97%);
     margin-bottom: 5px;
     border: 3px solid hsla(0, 0%, 85%, 0.75);
     border-radius: 5px;
     display: flex;
+    align-items: center;
     width: 75%;
     text-align: start;
 }
 
 .text {
     flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 20px;
 }
 
 .delete-button,
 .move-button {
-    font-size: 1.4rem;
-    margin-left: 7px;
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
+    font-size: 1rem;
+    margin-left: 5px;
+    flex: 0 0 auto;
+    display: flex;
     justify-content: center;
     align-items: center;
+    width: 40px;
+    height: 40px;
 }
 
 .input-and-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+    position: relative;
     margin-bottom: 50px;
+    width: 50%;
+    margin: 0px auto 50px auto;
 }
 
 .input-task-box {
@@ -100,16 +98,31 @@ li {
     border: 2px solid hsla(0, 0%, 80%, 0.5);
     border-radius: 5px;
     margin-right: 1px;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: hsla(0, 0%, 0%, 0.75);
-    width: 30%;
+    width: 100%;
+    padding-right: 60px;
+    box-sizing: border-box;
 }
 
 .add-button {
-    font-size: 1.7rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 1.3rem;
+    background-color: hsl(125, 47%, 54%);
+    border: 1px solid hsla(0, 0%, 80%, 0.5);
+    border-radius: 0 5px 5px 0;
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .highlighted {
     background-color: hsl(0, 0%, 60%);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.3s ease;
 }

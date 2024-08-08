@@ -1,11 +1,23 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 function ToDoTaskList() {
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState("");
     const [highlightedIndex, setHighlightedIndex] = useState(null);
+
+    useEffect(() => {
+        if (highlightedIndex !== null) {
+            const timer = setTimeout(() => {
+                setHighlightedIndex(null);
+            }, 500);
+
+            return () => clearTimeout(timer);
+        }
+    }, [highlightedIndex]);
 
     function handleInputChange(event) {
         setNewTask(event.target.value);
@@ -47,20 +59,10 @@ function ToDoTaskList() {
         }
     }
 
-    useEffect(() => {
-        if (highlightedIndex !== null) {
-            const timer = setTimeout(() => {
-                setHighlightedIndex(null);
-            }, 500); // Highlight duration in milliseconds
-
-            return () => clearTimeout(timer);
-        }
-    }, [highlightedIndex]);
-
     return (
         <>
             <div className="to-do-list">
-                <h1 className="to-do-heading">To-Do-List</h1>
+                <h1 className="to-do-heading">To-Do List</h1>
                 <div className="input-and-button">
                     <input
                         className="input-task-box"
@@ -88,15 +90,15 @@ function ToDoTaskList() {
                             <span className="text">{task}</span>
                             <button
                                 className="move-button"
-                                onClick={() => moveTaskUp(index)}
+                                onClick={() => moveTaskDown(index)}
                             >
-                                &#x2191;
+                                <FontAwesomeIcon icon={faArrowDown} />
                             </button>
                             <button
                                 className="move-button"
-                                onClick={() => moveTaskDown(index)}
+                                onClick={() => moveTaskUp(index)}
                             >
-                                &#x2193;
+                                <FontAwesomeIcon icon={faArrowUp} />
                             </button>
                             <button
                                 className="delete-button"
