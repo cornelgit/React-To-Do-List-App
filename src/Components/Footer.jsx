@@ -9,12 +9,6 @@ function Footer() {
                         &copy; {new Date().getFullYear()} Cornel Stoica. All
                         rights reserved.
                     </p>
-                    <div className="footer-links">
-                        <a href="#about">About</a>
-                        <a href="#services">Services</a>
-                        <a href="#contact">Contact</a>
-                        <a href="#privacy">Privacy Policy</a>
-                    </div>
                 </div>
             </div>
         </footer>

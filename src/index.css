@@ -54,7 +54,7 @@ button {
 }
 
 li {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 5px 2px 5px 5px;
     background-color: hsl(0, 0%, 97%);
     margin-bottom: 5px;
@@ -62,7 +62,7 @@ li {
     border-radius: 5px;
     display: flex;
     align-items: center;
-    width: 75%;
+    width: 50%;
     text-align: start;
 }
 
@@ -89,8 +89,8 @@ li {
 .input-and-button {
     position: relative;
     margin-bottom: 50px;
-    width: 50%;
-    margin: 0px auto 50px auto;
+    width: 30%;
+    margin: 0px auto 100px auto;
 }
 
 .input-task-box {
@@ -98,7 +98,7 @@ li {
     border: 2px solid hsla(0, 0%, 80%, 0.5);
     border-radius: 5px;
     margin-right: 1px;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     color: hsla(0, 0%, 0%, 0.75);
     width: 100%;
     padding-right: 60px;
@@ -110,7 +110,7 @@ li {
     right: 0;
     top: 0;
     bottom: 0;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     background-color: hsl(125, 47%, 54%);
     border: 1px solid hsla(0, 0%, 80%, 0.5);
     border-radius: 0 5px 5px 0;
@@ -125,4 +125,8 @@ li {
 .highlighted {
     background-color: hsl(0, 0%, 60%);
     transition: background-color 0.3s ease;
+}
+
+.to-do-heading {
+    margin-bottom: 100px;
 }
