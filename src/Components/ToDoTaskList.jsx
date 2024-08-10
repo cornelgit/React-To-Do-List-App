@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 function ToDoTaskList() {
     const [tasks, setTasks] = useState([]);
@@ -75,7 +76,7 @@ function ToDoTaskList() {
                         }}
                     />
                     <button className="add-button" onClick={addTask}>
-                        Add
+                        <FontAwesomeIcon icon={faPlus} />
                     </button>
                 </div>
 
