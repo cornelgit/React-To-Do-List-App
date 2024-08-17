@@ -1,7 +1,7 @@
 .footer {
     background-color: #282c34;
     color: white;
-    padding: 5px 0; /* Reduced top and bottom padding */
+    padding: 5px 0;
     text-align: center;
     width: 100%;
     position: absolute;
@@ -14,7 +14,7 @@
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 5px; /* Reduced side padding */
+    padding: 0 5px;
 }
 
 .footer-content {

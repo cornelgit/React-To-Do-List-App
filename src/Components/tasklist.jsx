@@ -5,7 +5,7 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-function ToDoTaskList() {
+function TaskList() {
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState("");
     const [highlightedIndex, setHighlightedIndex] = useState(null);
@@ -115,4 +115,4 @@ function ToDoTaskList() {
     );
 }
 
-export default ToDoTaskList;
+export default TaskList;

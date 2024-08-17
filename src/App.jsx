@@ -1,10 +1,10 @@
-import Footer from "./Components/Footer";
-import ToDoTaskList from "./Components/ToDoTaskList";
+import Footer from "./Components/footer";
+import TaskList from "./Components/tasklist";
 
 function App() {
     return (
         <>
-            <ToDoTaskList />
+            <TaskList />
             <Footer />
         </>
     );
