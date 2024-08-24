@@ -1,5 +1,5 @@
-import Footer from "./Components/footer";
-import TaskList from "./Components/tasklist";
+import Footer from "./Components/Footer";
+import TaskList from "./Components/Tasklist";
 
 function App() {
     return (
