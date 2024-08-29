@@ -160,3 +160,26 @@ li:focus {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 738px) {
+    .input-and-button {
+        margin-bottom: 100px;
+        width: 90%;
+    }
+
+    li {
+        width: 90%;
+    }
+
+    li,
+    text {
+        font-size: 1.25rem;
+    }
+
+    .delete-button,
+    .move-button {
+        width: 30px;
+        height: 30px;
+    }
+}
